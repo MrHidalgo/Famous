@@ -1,0 +1,12 @@
+ProjectTitle: Famous
+
+PageList:
+- file: /
+  titleName: Home
+  ready: 5
+- file: services.html
+  titleName: Services
+  ready: 5
+- file: artists.html
+  titleName: Artists
+  ready: 5
