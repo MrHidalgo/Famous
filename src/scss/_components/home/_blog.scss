@@ -86,7 +86,8 @@
     &-body {
       position: relative;
       top: -132px;
-      width: 368px;
+      width: 100%;
+      max-width: calc(100% - 32px);
       padding: 30px 30px 35px 41px;
         background-color: $c-white;
     }
