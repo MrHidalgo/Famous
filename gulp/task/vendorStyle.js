@@ -20,12 +20,18 @@ const configPath  = require('../config/configPath'),
  */
 gulp.task('vendorStyle', function() {
 
-  let files = mainBowerFiles('**/*.css');
+  let files = mainBowerFiles([
+    '**/*.css',
+    "**/selectric.css",
+    "!" + "**/selectric.css"
+  ]);
+
+  console.log(files);
 
   files.push(
     configPath.src.vendorStyle + "/*.css",
     configPath.src.vendorStyle + "/**/*.css",
-    "!" + configPath.src.vendorStyle + "/**/_**.css"
+    "!" + configPath.src.vendorStyle + "/**/_**.css",
   );
 
 

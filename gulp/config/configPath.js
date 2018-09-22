@@ -15,7 +15,8 @@ const configPath = {
     vendorScript  : srcPath + '/vendorScript',
     image         : srcPath + '/img',
     icon          : srcPath + '/icon',
-    fonts         : srcPath + '/fonts'
+    fonts         : srcPath + '/fonts',
+    video         : srcPath + '/video',
   },
 
   // DEST
@@ -26,7 +27,8 @@ const configPath = {
     js            : destPath + '/js',
     img           : destPath + '/img',
     icon          : destPath + '/icon',
-    fonts         : destPath + '/fonts'
+    fonts         : destPath + '/fonts',
+    video         : destPath + '/video'
   },
 
   errorHandler: require('../util/error')

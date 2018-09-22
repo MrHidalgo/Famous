@@ -1,0 +1,41 @@
+// REAL :: START
+
+section#real.real
+  .c-grid
+    .real__wrapper.real__wrapper-0
+      .real__line
+
+      p.real__subtitle!= "ou're  not  alone."
+
+      h1.real__title.title.title--dark!= "Real  Experts.<br>Real  People."
+
+      p.real__text!= "Find  your  nearest  mentor"
+
+      .real__select-wrap
+        select.real__select()
+          option!= "Options"
+          option!= "Options 1"
+          option!= "Options 2"
+          option!= "Options 3"
+          option!= "Options 4"
+          option!= "Options 5"
+          option!= "Options 6"
+          option!= "Options 7"
+          option!= "Options 8"
+          option!= "Options 9"
+
+    .real__wrapper.real__wrapper-1
+      video.real__video.object-fit.object-fit--coverCenter(
+        poster="./img/img-real-video-poster.jpg"
+      )
+        source(src="./video/videoplayback.mp4" type="video/mp4")
+        source(src="./video/videoplayback.webm" type="video/webm")
+
+      a.real__video-btn(
+        href="#"
+        title="" class=""
+        videoPlay-js
+      )
+        +iconSVG("play")
+
+// REAL :: END

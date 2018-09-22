@@ -19,6 +19,31 @@ $(document).ready((ev) => {
    * =============================================
    */
 
+  /**
+   *
+   */
+  const initSelectric = () => {
+    $(".real__select").selectric({
+      responsive: true,
+      inheritOriginalWidth: true,
+      disableOnMobile: false
+    });
+  };
+
+
+  const initVideoPlay = () => {
+    const vd = $("video")[0];
+
+    $("[videoPlay-js]").on("click", () => {
+      if(vd.paused) {
+        vd.play();
+      } else {
+        vd.pause();
+        vd.currentTime = 0;
+      }
+    })
+  };
+
 
 
   /**
@@ -31,6 +56,8 @@ $(document).ready((ev) => {
     initSvg4everybody();
     // lib
     // callback
+    initSelectric();
+    initVideoPlay();
   };
   initJquery();
 });
