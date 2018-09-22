@@ -1,7 +1,15 @@
 // COMMON :: START
 
 // title
-.tilte {}
+.title {
+  letter-spacing: 4.29px;
+  font-size: 78px;
+  font-weight: bold;
+
+  &--white {
+    color: $c-white;
+  }
+}
 // title :: end
 
 

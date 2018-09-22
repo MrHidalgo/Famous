@@ -1,0 +1,49 @@
+// BLOG :: START
+
+section#blog.blog
+  .blog__bg
+    .blog__bg-top
+
+  .c-grid
+    .blog__wrapper
+
+      h1.blog__title.title.title--white!= "Blog"
+
+      .blog__block-wrap
+        .blog__block.blog__block-0
+          .blog__block-img
+            +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-blog-0")
+          .blog__block-body
+            p.blog__block-title!= "Welcome To Desiclassifieds Free Classifieds Free Ads Free"
+            a.blog__block-link(
+              href="#"
+              title="" class=""
+            )
+              span!= "LEARN MORE"
+              +iconSVG("arrow")
+
+        .blog__block.blog__block-1
+          .blog__block-img
+            +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-blog-1")
+          .blog__block-body
+            p.blog__block-title!= "Welcome To Desiclassifieds Free Classifieds Free Ads Free"
+            a.blog__block-link(
+              href="#"
+              title="" class=""
+            )
+              span!= "LEARN MORE"
+              +iconSVG("arrow")
+
+        .blog__block.blog__block-2
+          .blog__block-img
+            +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-blog-2")
+          .blog__block-body
+            p.blog__block-title!= "Welcome To Desiclassifieds Free Classifieds Free Ads Free"
+            a.blog__block-link(
+              href="#"
+              title="" class=""
+            )
+              span!= "LEARN MORE"
+              +iconSVG("arrow")
+
+// BLOG :: END

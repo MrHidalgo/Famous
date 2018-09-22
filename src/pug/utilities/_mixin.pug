@@ -11,12 +11,12 @@ mixin iconSVG(name, mod)
 //-
 //- example: +pictureTag(false, "png", "img-home-video-poster")
 //-
-mixin pictureTag(ieSupport, imgType, imgName)
+mixin pictureTag(ieSupport, classModPicture, classModImage, imgType, imgName)
   -
     var imgStringPathWebp = './img/' + imgName + '.webp, ./img/' + imgName + '@2x.webp 2x',
       imgStringPath = './img/' + imgName + '.' + imgType + ', ./img/' + imgName + '@2x.' + imgType + ' 2x';
 
-  picture
+  picture(class!= classModPicture)
     if(ieSupport)
       <!--[if IE 9]>
       video(style="display: none;")
@@ -28,7 +28,7 @@ mixin pictureTag(ieSupport, imgType, imgName)
       source(srcset!= imgStringPathWebp type="image/webp")
       source(srcset!= imgStringPath type!= "image/" + imgType)
 
-    img(srcset!= imgStringPath)
+    img(class!= classModImage, srcset!= imgStringPath)
 
 
 //- FIND MORE
