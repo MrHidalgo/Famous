@@ -1,5 +1,29 @@
 // LOGOTYPE :: START
 
-.logo {}
+.logo {
+  &__link {
+    display: flex;
+    color: $c-white;
+    font-size: 31px;
+    font-weight: 300;
+    @include transition(color);
+
+    &:hover {
+      color: $c-0074e1;
+      @include transition(color);
+
+      span {
+        color: $c-white;
+        @include transition(color);
+      }
+    }
+
+    span {
+      color: $c-0074e1;
+      font-weight: 900;
+      @include transition(color);
+    }
+  }
+}
 
 // LOGOTYPE :: END

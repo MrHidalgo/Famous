@@ -1,0 +1,48 @@
+// SOCIAL :: START
+
+.social {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:last-child {
+      a {
+        margin-right: 0;
+      }
+    }
+
+    &:hover {
+      a {
+        transform: rotateY(360deg);
+        background-color: $c-0074e1;
+        @include transition(transform 0.5s, background-color 0.5s);
+
+        svg {
+          fill: $c-white;
+          @include transition(fill 0.5s);
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 100%;
+    background-color: $c-white;
+    @include transition(transform 0.5s, background-color 0.5s);
+
+    svg {
+      fill: $c-18162e;
+      @include transition(fill 0.5s);
+    }
+  }
+}
+
+// SOCIAL :: END

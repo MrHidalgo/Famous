@@ -29,3 +29,16 @@ $paddingRight: $paddingLeft;
     max-width: 100%;
   }
 }
+
+// for develop - del for production
+.c-grid {
+  @include respond(small) {
+    max-width: $maxWidth;
+  }
+  @include respond(extra-large) {
+    max-width: $maxWidth;
+  }
+  @include respond(wide-small) {
+    max-width: $maxWidth;
+  }
+}

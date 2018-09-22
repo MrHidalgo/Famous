@@ -30,4 +30,14 @@ mixin pictureTag(ieSupport, imgType, imgName)
 
     img(srcset!= imgStringPath)
 
+
+//- FIND MORE
+mixin findMoreMacros(classMod, placeholder, btnVal)
+  .findout(class!= "findout--" + classMod)
+    form.findout__form(action="" method="" autocomplete="off")
+      .findout__form-field
+        input(type="text" name="" placeholder!= placeholder)
+        button.btn.btn--blue(type="submit")!= btnVal
+
+
 //- MIXIN :: END

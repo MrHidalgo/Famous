@@ -1,0 +1,17 @@
+// SOCIAL :: START
+
+mixin socialItem(iconName)
+  li.social__item
+    a.social__link(
+      href="#"
+      title="" class=""
+    )
+      +iconSVG(iconName)
+
+.social
+  ul.social__list
+    each val, idx in dataObj.social
+      +socialItem(dataObj.social[idx].name)
+
+
+// SOCIAL :: END

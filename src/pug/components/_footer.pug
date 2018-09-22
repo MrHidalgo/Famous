@@ -3,5 +3,17 @@
 footer#footer.footer
   .c-grid
     .footer__wrapper
+      .footer__wrapper-left
+        .footer__wrapper-left--top
+          include ../macros/_logotype
+
+        .footer__wrapper-left--bottom
+          include ../macros/_social
+
+      .footer__wrapper-right
+        .footer__wrapper-top
+
+        .footer__wrapper-bottom
+          +findMoreMacros("footer", "Email Address", "FIND OUT MORE")
 
 // FOOTER :: END
