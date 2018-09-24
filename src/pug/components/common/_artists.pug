@@ -1,0 +1,52 @@
+// ARTISTS :: START
+
+section#artists.artists
+  .artists__letter-wrap
+    p.artists__letter.artists__letter-0!= "F"
+    p.artists__letter.artists__letter-1!= "A"
+    p.artists__letter.artists__letter-2!= "M"
+    p.artists__letter.artists__letter-3!= "O"
+    p.artists__letter.artists__letter-4!= "S"
+
+  .c-grid
+    .artists__wrapper.artists__wrapper-0
+      .artists__wrapper-left
+        p.artists__subtitle.subtitle!= "Our artists"
+
+        if(contentClassName === "services")
+          h1.artists__title.title.title--dark!= "Join the Roster"
+
+          .artists__btn-group
+            a.artists__btn.btn.btn--blue(
+              href="#"
+              title="" class=""
+            )!= "FIND OUT MORE"
+            a.artists__btn.btn.btn--dark(
+              href="#"
+              title="" class=""
+            )!= "OUR ARTISTS"
+
+        else
+          h1.artists__title.title.title--dark!= "Creative <br>Services"
+
+          p.artists__text!= "Work  with  the  industries  finest  creatives"
+          a.artists__btn.btn.btn--blue(
+            href="#"
+            title="" class=""
+          )!= "FIND OUT MORE"
+
+      .artists__wrapper-right
+        .artists__img.artists__img-0
+          +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-artists-0")
+
+    .artists__wrapper.artists__wrapper-1
+      .artists__wrapper-left
+        .artists__img.artists__img-1
+          +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-artists-1")
+
+      .artists__wrapper-right
+        .artists__img.artists__img-2
+          +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-artists-2")
+
+
+// ARTISTS :: END

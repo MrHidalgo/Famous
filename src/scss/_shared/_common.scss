@@ -17,6 +17,18 @@
 // title :: end
 
 
+// subtitle
+.subtitle {
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 1.43px;
+  color: $c-cfd1d3;
+  font-size: 18px;
+  font-weight: bold;
+}
+// subtitle :: end
+
+
 // btn
 .btn {
   cursor: pointer;
@@ -55,7 +67,7 @@
 
   &:hover {
     padding-top: 2px;
-    @include transition(padding-top);
+    @include transition(padding-top, background-color);
 
     &:after {
       left: 120%;
@@ -68,7 +80,14 @@
 
     &:hover {
       background-color: lighten($c-0074e1, 5%);
-      @include transition(padding-top, background-color);
+    }
+  }
+
+  &--dark {
+    background-color: $c-111;
+
+    &:hover {
+      background-color: lighten($c-111, 5%);
     }
   }
 }

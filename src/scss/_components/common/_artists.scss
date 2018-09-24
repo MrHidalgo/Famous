@@ -1,0 +1,168 @@
+// ARTISTS :: START
+
+.artists {
+  position: relative;
+  padding-top: 86px;
+
+  .services & {
+    padding-bottom: 126px;
+  }
+
+  &__letter {
+    z-index: 0;
+    position: absolute;
+    color: $c-ececec;
+    line-height: 1;
+    font-size: 122px;
+    font-weight: 600;
+
+    &-wrap {
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-0,
+    &-3 {
+      left: 126px;
+    }
+    &-0 {
+      .home & {
+        top: 408px;
+      }
+      .services & {
+        top: 337px;
+      }
+    }
+    &-3 {
+      .home & {
+        bottom: 56px;
+      }
+      .services & {
+        bottom: 103px;
+      }
+    }
+
+    &-4,
+    &-1 {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &-1 {
+      .home & {
+        top: 408px;
+      }
+      .services & {
+        top: 337px;
+      }
+    }
+    &-4 {
+      .home & {
+        bottom: 56px;
+      }
+      .services & {
+        bottom: 103px;
+      }
+    }
+
+    &-2 {
+      right: 97px;
+
+      .home & {
+        top: 408px;
+      }
+      .services & {
+        top: 337px;
+      }
+    }
+  }
+
+  &__wrapper {
+    z-index: 1;
+    position: relative;
+    display: flex;
+
+    &-left,
+    &-right {
+      width: 50%;
+    }
+
+    &-0 {
+      padding-bottom: 69px;
+    }
+  }
+
+  &__subtitle {
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    .services & {
+      padding-bottom: 36px;
+    }
+  }
+
+  &__text {
+    padding-top: 23px;
+    padding-bottom: 36px;
+    color: $c-a8aaac;
+    font-size: 24px;
+  }
+
+  &__btn {
+    margin-right: 32px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &-group {
+      display: flex;
+    }
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 25px 2px 50px 0 rgba($c-17182c, 0.2);
+
+    &-0,
+    &-2 {
+      width: 100%;
+      max-width: 549px;
+      height: 662px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-0 {
+      picture {
+        img {
+          object-position: left;
+        }
+      }
+    }
+
+    &-1 {
+      position: relative;
+      top: -250px;
+      width: 100%;
+      max-width: 651px;
+      height: 818px;
+    }
+
+    picture {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// ARTISTS :: END
