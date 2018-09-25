@@ -4,8 +4,12 @@
   position: relative;
   padding-top: 86px;
 
+  .home & {
+    padding-bottom: 100px;
+  }
+
   .services & {
-    padding-bottom: 126px;
+    padding-bottom: 266px;
   }
 
   &__letter {
@@ -68,14 +72,24 @@
       }
     }
 
-    &-2 {
+    &-2,
+    &-5 {
       right: 97px;
-
+    }
+    &-2 {
       .home & {
         top: 408px;
       }
       .services & {
         top: 337px;
+      }
+    }
+    &-5 {
+      .home & {
+        bottom: 56px;
+      }
+      .services & {
+        bottom: 103px;
       }
     }
   }
@@ -88,10 +102,6 @@
     &-left,
     &-right {
       width: 50%;
-    }
-
-    &-0 {
-      padding-bottom: 69px;
     }
   }
 
@@ -139,6 +149,15 @@
     }
 
     &-0 {
+
+      .home & {
+        margin-bottom: 129px;
+      }
+
+      .services & {
+        margin-bottom: 89px;
+      }
+
       picture {
         img {
           object-position: left;
@@ -148,10 +167,16 @@
 
     &-1 {
       position: relative;
-      top: -250px;
       width: 100%;
       max-width: 651px;
       height: 818px;
+
+      .home & {
+        margin-top: 133px;
+      }
+      .services & {
+        margin-top: 229px;
+      }
     }
 
     picture {

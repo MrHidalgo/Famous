@@ -1,5 +1,12 @@
 // NAV :: START
 
 nav.nav
+  ul.nav__list
+    each val, idx in dataObj.nav
+      li.nav__item
+        a(
+          href= dataObj.nav[idx].href
+          title="" class="nav__link"
+        )!= dataObj.nav[idx].name
 
 // NAV :: END

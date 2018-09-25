@@ -10,18 +10,9 @@ const initWebFontLoader = () => {
   WebFont.load({
     google: {
       families: [
-        'Lato:300,400,700,900'
+        'Montserrat:300,400,500,600,700,900'
       ]
     }
   });
-
-  const WebFontConfig = {
-    custom: {
-      families: [
-        'SofiaPro:n3,n4,n5,n6,n7,n9',
-        'SofiaProUltra:n2'
-      ]
-    }
-  };
 
 };

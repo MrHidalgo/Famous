@@ -35,6 +35,9 @@ $paddingRight: $paddingLeft;
   @include respond(small) {
     max-width: $maxWidth;
   }
+  @include respond(large) {
+    max-width: $maxWidth;
+  }
   @include respond(extra-large) {
     max-width: $maxWidth;
   }

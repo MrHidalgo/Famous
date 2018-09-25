@@ -4,6 +4,11 @@
   &__list {
     display: flex;
     align-items: center;
+
+    @include respond(max-small) {
+      justify-content: center;
+      margin-bottom: 40px;
+    }
   }
 
   &__item {

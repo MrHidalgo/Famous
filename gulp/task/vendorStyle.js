@@ -26,7 +26,6 @@ gulp.task('vendorStyle', function() {
     "!" + "**/selectric.css"
   ]);
 
-  console.log(files);
 
   files.push(
     configPath.src.vendorStyle + "/*.css",
