@@ -63,10 +63,14 @@
     }
 
     &:first-child {
-      margin-left: 0;
+      @include respond(large) {
+        margin-left: 0;
+      }
     }
     &:last-child {
-      margin-right: 0;
+      @include respond(large) {
+        margin-right: 0;
+      }
     }
 
     &-wrap {

@@ -3,6 +3,9 @@
 .ar {
   position: relative;
   padding-top: 89px;
+  @include respond(max-small) {
+    padding-top: 44px;
+  }
 
   &__bg {
     z-index: 0;
@@ -42,12 +45,26 @@
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
+    @include respond(max-medium) {
+      max-width: calc(50% - 40px);
+      margin-bottom: 40px;
+    }
+    @include respond(max-small) {
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 40px 30px 40px;
+    }
 
     &:first-child {
-      margin-left: 0;
+      @include respond(large) {
+        margin-left: 0;
+      }
     }
     &:last-child {
-      margin-right: 0;
+      @include respond(large) {
+        margin-right: 0;
+      }
     }
 
     &-wrapper {
@@ -56,6 +73,14 @@
       display: flex;
       justify-content: space-between;
       padding-bottom: 152px;
+      @include respond(max-medium) {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 76px;
+      }
+      @include respond(max-small) {
+        padding-bottom: 38px;
+      }
     }
 
     &-img {
