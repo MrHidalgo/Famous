@@ -3,6 +3,9 @@
 .artists {
   position: relative;
   padding-top: 86px;
+  @include respond(max-small) {
+    padding-top: 50px;
+  }
 
   .home & {
     padding-bottom: 100px;
@@ -10,6 +13,9 @@
 
   .services & {
     padding-bottom: 266px;
+    @include respond(max-small) {
+      padding-bottom: 133px;
+    }
   }
 
   &__letter {
@@ -19,6 +25,18 @@
     line-height: 1;
     font-size: 122px;
     font-weight: 600;
+    @include respond(max-wide-small) {
+      font-size: 102px;
+    }
+    @include respond(max-medium) {
+      font-size: 85px;
+    }
+    @include respond(max-small) {
+      font-size: 68px;
+    }
+    @include respond(max-extra-small) {
+      font-size: 51px;
+    }
 
     &-wrap {
       z-index: 0;
@@ -32,6 +50,10 @@
     &-0,
     &-3 {
       left: 126px;
+      @include respond(max-small) {
+        left: 15%;
+        transform: translateX(-50%);
+      }
     }
     &-0 {
       .home & {
@@ -39,14 +61,23 @@
       }
       .services & {
         top: 337px;
+        @include respond(max-extra-small) {
+          top: 408px;
+        }
       }
     }
     &-3 {
       .home & {
         bottom: 56px;
+        @include respond(max-small) {
+          bottom: 28px;
+        }
       }
       .services & {
         bottom: 103px;
+        @include respond(max-small) {
+          bottom: 51px;
+        }
       }
     }
 
@@ -61,20 +92,33 @@
       }
       .services & {
         top: 337px;
+        @include respond(max-extra-small) {
+          top: 408px;
+        }
       }
     }
     &-4 {
       .home & {
         bottom: 56px;
+        @include respond(max-small) {
+          bottom: 28px;
+        }
       }
       .services & {
         bottom: 103px;
+        @include respond(max-small) {
+          bottom: 51px;
+        }
       }
     }
 
     &-2,
     &-5 {
       right: 97px;
+      @include respond(max-small) {
+        right: 15%;
+        transform: translateX(50%);
+      }
     }
     &-2 {
       .home & {
@@ -82,14 +126,23 @@
       }
       .services & {
         top: 337px;
+        @include respond(max-extra-small) {
+          top: 408px;
+        }
       }
     }
     &-5 {
       .home & {
         bottom: 56px;
+        @include respond(max-small) {
+          bottom: 28px;
+        }
       }
       .services & {
         bottom: 103px;
+        @include respond(max-small) {
+          bottom: 51px;
+        }
       }
     }
   }
@@ -98,10 +151,27 @@
     z-index: 1;
     position: relative;
     display: flex;
+    @include respond(max-small) {
+      flex-wrap: wrap;
+    }
 
     &-left,
     &-right {
       width: 50%;
+      @include respond(max-small) {
+        width: 100%;
+      }
+    }
+    &-left {
+      @include respond(max-small) {
+        padding-bottom: 50px;
+      }
+    }
+    &-right {
+      padding-left: 15px;
+      @include respond(max-small) {
+        padding-left: 0;
+      }
     }
   }
 
@@ -120,17 +190,30 @@
     padding-bottom: 36px;
     color: $c-a8aaac;
     font-size: 24px;
+    @include respond(max-small) {
+      font-size: 20px;
+    }
   }
 
   &__btn {
     margin-right: 32px;
+    @include respond(max-extra-small) {
+      margin-right: 0;
+      max-width: 100%;
+    }
 
     &:last-of-type {
       margin-right: 0;
+      @include respond(max-extra-small) {
+        margin-top: 15px;
+      }
     }
 
     &-group {
       display: flex;
+      @include respond(max-extra-small) {
+        flex-wrap: wrap;
+      }
     }
   }
 
@@ -138,6 +221,13 @@
     position: relative;
     overflow: hidden;
     box-shadow: 25px 2px 50px 0 rgba($c-17182c, 0.2);
+
+    &:hover {
+      picture {
+        transform: scale(1.1);
+        @include transition(transform 0.4s);
+      }
+    }
 
     &-0,
     &-2 {
@@ -149,13 +239,18 @@
     }
 
     &-0 {
-
       .home & {
         margin-bottom: 129px;
+        @include respond(max-small) {
+          margin-bottom: 50px;
+        }
       }
 
       .services & {
         margin-bottom: 89px;
+        @include respond(max-small) {
+          margin-bottom: 50px;
+        }
       }
 
       picture {
@@ -176,6 +271,9 @@
       }
       .services & {
         margin-top: 229px;
+        @include respond(max-small) {
+          margin-top: 163px;
+        }
       }
     }
 
@@ -186,6 +284,7 @@
       left: 0;
       width: 100%;
       height: 100%;
+      @include transition(transform 0.4s);
     }
   }
 }
