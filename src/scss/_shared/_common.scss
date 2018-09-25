@@ -6,6 +6,15 @@
   line-height: 1;
   font-size: 78px;
   font-weight: bold;
+  @include respond(max-wide-small) {
+    font-size: 64px;
+  }
+  @include respond(max-medium) {
+    font-size: 51px;
+  }
+  @include respond(max-extra-small) {
+    font-size: 38px;
+  }
 
   &--white {
     color: $c-white;

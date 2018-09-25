@@ -3,6 +3,9 @@
 .blog {
   position: relative;
   padding-top: 80px;
+  @include respond(max-small) {
+    padding-top: 40px;
+  }
 
   &__bg {
     z-index: 0;
@@ -39,7 +42,10 @@
   }
 
   &__title {
-    padding-bottom: 87px;
+    padding-bottom: 95px;
+    @include respond(max-small) {
+      padding-top: 47px;
+    }
   }
 
   &__block {
@@ -47,6 +53,14 @@
     max-width: 400px;
     margin-left: 20px;
     margin-right: 20px;
+    @include respond(max-medium) {
+      max-width: calc(50% - 40px);
+    }
+    @include respond(max-small) {
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
 
     &:first-child {
       margin-left: 0;
@@ -58,6 +72,10 @@
     &-wrap {
       display: flex;
       justify-content: space-between;
+      @include respond(max-medium) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
 
     &-img {
@@ -88,8 +106,8 @@
       top: -132px;
       width: 100%;
       max-width: calc(100% - 32px);
-      padding: 30px 30px 35px 41px;
-        background-color: $c-white;
+      padding: 27px 35px 30px 41px;
+      background-color: $c-white;
     }
 
     &-title {
@@ -97,16 +115,33 @@
       letter-spacing: 1.87px;
       font-size: 30px;
       font-weight: 600;
+      @include respond(max-extra-large) {
+        font-size: 26px;
+      }
+      @include respond(max-large) {
+        font-size: 22px;
+      }
     }
 
     &-link {
       overflow: hidden;
       display: flex;
+      align-items: center;
       color: $c-0074e1;
       font-size: 16px;
       font-weight: bold;
+      @include transition(color);
+      @include respond(max-extra-large) {
+        font-size: 15px;
+      }
+      @include respond(max-large) {
+        font-size: 14px;
+      }
 
       &:hover {
+        color: lighten($c-0074e1, 5%);
+        @include transition(color);
+
         svg {
           transform: translateX(50%);
           @include transition(transform);
