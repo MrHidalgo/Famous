@@ -55,6 +55,7 @@ $(document).ready((ev) => {
     initPreventBehavior();
     initSvg4everybody();
     // lib
+    initHamburger();
     // callback
     initSelectric();
     initVideoPlay();

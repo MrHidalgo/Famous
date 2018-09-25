@@ -14,6 +14,12 @@
         flex-direction: column;
       }
     }
+
+    .header & {
+      @include respond(max-small) {
+        flex-direction: column;
+      }
+    }
   }
 
   &__item {
@@ -43,6 +49,25 @@
         min-height: 50px;
         margin-left: 0;
         margin-right: auto;
+      }
+    }
+
+    .header & {
+      @include respond(max-large) {
+        margin-left: 23px;
+        margin-right: 23px;
+      }
+      @include respond(max-medium) {
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 16px;
+      }
+      @include respond(max-small) {
+        justify-content: center;
+        min-height: 55px;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 18px;
       }
     }
 

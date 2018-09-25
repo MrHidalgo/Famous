@@ -3,5 +3,18 @@
 header#header.header
   .c-grid
     .header__wrapper
+      .header__wrapper-left
+        include ../macros/_logotype
+
+        include ../macros/_hamburger
+
+      .header__mobile(mobile-block-js)
+        .header__wrapper-right
+          include ../macros/_nav
+
+          a.header__btn(
+            href="#"
+            title="" class=""
+          )!= "Apply Now"
 
 // HEADER :: END

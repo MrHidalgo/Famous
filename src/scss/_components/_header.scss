@@ -1,5 +1,123 @@
 // HEADER :: START
 
-.header {}
+.header {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: $c-18162e;
+  @include transition(background-color);
+
+  &--fixed {
+    background-color: rgba($c-18162e, 0.925);
+    @include transition(background-color);
+
+    .header__wrapper {
+      padding-top: 0;
+      min-height: calc(131px - (41px + 25px));
+      @include transition(padding-top 0.25s, min-height 0.5s);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 131px;
+    padding-top: 41px;
+    @include transition(padding-top 0.25s, min-height 0.5s);
+    @include respond(max-small) {
+      padding-top: 0;
+      min-height: calc(131px - (41px + 25px));
+    }
+
+    &-left {
+      width: 150px;
+      @include respond(max-small) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .hamburger {
+        @include respond(medium) {
+          display: none;
+        }
+      }
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      @include respond(max-small) {
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    width: 100%;
+    max-width: calc(100% - 150px);
+
+    @include respond(max-small) {
+      display: none;
+      z-index: 99;
+      overflow-y: auto;
+      position: fixed;
+      top: 65px;
+      left: 0;
+      max-width: 100vw;
+      height: calc(100% - 65px);
+      padding: 30px 0;
+      background-color: rgba($c-18162e, 0.925);
+      border-top: 1px solid rgba($c-white, 0.1);
+
+      &.is-open {
+        display: block;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 150px;
+    height: 46px;
+    margin-left: 74px;
+    border: 1px solid rgba($c-white, 0.3);
+    background-color: transparent;
+    color: $c-white;
+    font-size: 18px;
+    @include transition(border-color, background-color);
+    @include respond(max-large) {
+      margin-left: 23px;
+    }
+    @include respond(max-medium) {
+      margin-left: 15px;
+      font-size: 16px;
+    }
+    @include respond(max-small) {
+      margin-left: 0;
+      margin-top: 30px;
+      font-size: 18px;
+    }
+
+    &:hover {
+      border-color: $c-0074e1;
+      background-color: $c-0074e1;
+      @include transition(border-color, background-color);
+    }
+  }
+}
 
 // HEADER :: END
