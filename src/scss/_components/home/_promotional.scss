@@ -1,9 +1,13 @@
 // PROMOTIONAL :: START
 
 .promotional {
+  overflow: hidden;
   position: relative;
   padding-top: 42px;
   padding-bottom: 86px;
+  @include respond(max-extra-small) {
+    padding-bottom: 43px;
+  }
 
   &__bg {
     z-index: -1;
@@ -15,34 +19,60 @@
     height: calc(100% - (123px + 86px));
 
     &-left {
-      width: 65%;
+      width: 80%;
       background-color: $c-18162e;
+      @include respond(max-extra-small) {
+        width: 90%;
+      }
     }
     &-right {
-      width: 35%;
+      width: 20%;
+      @include respond(max-extra-small) {
+        width: 10%;
+      }
     }
   }
 
   &__wrapper {
     position: relative;
     display: flex;
-
-    &-left,
-    &-right {
-      z-index: 1;
-      position: relative;
+    @include respond(max-small) {
+      flex-wrap: wrap;
     }
 
     &-left {
       width: 100%;
       max-width: calc(100% - 400px);
       padding-top: 175px;
+      padding-right: 30px;
+      @include respond(max-small) {
+        max-width: 80%;
+        padding-right: 0;
+        padding-top: 125px;
+        padding-bottom: 50px;
+      }
     }
 
     &-right {
+      position: relative;
       display: flex;
       justify-content: flex-end;
       width: 400px;
+      @include respond(max-small) {
+        width: 100%;
+      }
+
+      picture {
+        z-index: 1;
+        position: relative;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+      }
     }
   }
 
@@ -85,6 +115,12 @@
 
   &__title {
     padding-bottom: 32px;
+    @include respond(max-medium) {
+      font-size: 41px;
+    }
+    @include respond(max-extra-small) {
+      font-size: 31px;
+    }
   }
 
   &__subtitle {
