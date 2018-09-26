@@ -1,7 +1,97 @@
 // PROMOTIONAL :: START
 
 .promotional {
+  position: relative;
   padding-top: 42px;
+  padding-bottom: 86px;
+
+  &__bg {
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - (123px + 86px));
+
+    &-left {
+      width: 65%;
+      background-color: $c-18162e;
+    }
+    &-right {
+      width: 35%;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+
+    &-left,
+    &-right {
+      z-index: 1;
+      position: relative;
+    }
+
+    &-left {
+      width: 100%;
+      max-width: calc(100% - 400px);
+      padding-top: 175px;
+    }
+
+    &-right {
+      display: flex;
+      justify-content: flex-end;
+      width: 400px;
+    }
+  }
+
+  &__line {
+    z-index: 0;
+    position: absolute;
+
+    &-0 {
+      top: 92px;
+      right: 34px;
+      width: 467px;
+      height: 45px;
+      background-color: #5f62ad;
+    }
+
+    &-1 {
+      top: 147px;
+      right: 249px;
+      width: 216px;
+      height: 12px;
+      background-color: #b93c68;
+    }
+    
+    &-2 {
+      bottom: 186px;
+      right: -34px;
+      width: 296px;
+      height: 42px;
+      background-color: #f4455a;
+    }
+
+    &-3 {
+      bottom: 164px;
+      right: -12px;
+      width: 276px;
+      height: 12px;
+      background-color: #0074e1;
+    }
+  }
+
+  &__title {
+    padding-bottom: 32px;
+  }
+
+  &__subtitle {
+    padding-bottom: 39px;
+    color: $c-a8aaac;
+    font-size: 24px;
+  }
 }
 
 // PROMOTIONAL :: END
