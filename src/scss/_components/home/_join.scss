@@ -1,0 +1,71 @@
+// JOIN :: START
+
+.join {
+  padding-top: 90px;
+  padding-bottom: 42px;
+  @include respond(max-small) {
+    padding-top: 45px;
+    padding-bottom: 21px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding-bottom: 252px;
+    @include respond(max-medium) {
+      flex-wrap: wrap;
+    }
+    @include respond(max-small) {
+      padding-bottom: 126px;
+    }
+
+    &-left {
+      width: 100%;
+      max-width: calc(100% - 502px);
+      @include respond(max-medium) {
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-right {
+      width: 502px;
+      @include respond(max-medium) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__btn {
+    margin-right: 32px;
+    @include respond(max-extra-small) {
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+      @include respond(max-extra-small) {
+        margin-top: 15px;
+      }
+    }
+
+    &-group {
+      display: flex;
+      padding-top: 25px;
+      @include respond(max-extra-small) {
+        padding-top: 0;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__line {
+    width: 100%;
+    max-width: 506px;
+    height: 8px;
+    background-color: $c-0074e1;
+  }
+}
+
+// JOIN :: END
