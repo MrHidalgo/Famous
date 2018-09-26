@@ -40,4 +40,14 @@ mixin findMoreMacros(classMod, placeholder, btnVal)
         button.btn.btn--blue(type="submit")!= btnVal
 
 
+//- LINK
+mixin link(classMod, val)
+  a.link(
+    href="#"
+    title="" class= classMod
+  )
+    span!= val
+    +iconSVG("arrow")
+
+
 //- MIXIN :: END

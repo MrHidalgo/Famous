@@ -126,41 +126,6 @@
         font-size: 22px;
       }
     }
-
-    &-link {
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      color: $c-0074e1;
-      font-size: 16px;
-      font-weight: bold;
-      @include transition(color);
-      @include respond(max-extra-large) {
-        font-size: 15px;
-      }
-      @include respond(max-large) {
-        font-size: 14px;
-      }
-
-      &:hover {
-        color: lighten($c-0074e1, 5%);
-        @include transition(color);
-
-        svg {
-          transform: translateX(50%);
-          @include transition(transform);
-        }
-      }
-
-      span {
-        margin-right: 21px;
-      }
-
-      svg {
-        position: relative;
-        @include transition(transform);
-      }
-    }
   }
 }
 

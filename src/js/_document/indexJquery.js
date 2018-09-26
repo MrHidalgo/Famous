@@ -31,6 +31,9 @@ $(document).ready((ev) => {
   };
 
 
+  /**
+   *
+   */
   const initVideoPlay = () => {
     const vd = $("video")[0];
 
@@ -44,6 +47,16 @@ $(document).ready((ev) => {
     })
   };
 
+
+  /**
+   *
+   */
+  const initLoseLink = () => {
+    $("[lose-link-js]").on('click', (e) => {
+      $("[lose-link-js]").removeClass("is-active");
+      $(e.currentTarget).addClass("is-active");
+    });
+  };
 
 
   /**
@@ -59,6 +72,7 @@ $(document).ready((ev) => {
     // callback
     initSelectric();
     initVideoPlay();
+    initLoseLink();
   };
   initJquery();
 });

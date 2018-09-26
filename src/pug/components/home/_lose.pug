@@ -3,5 +3,41 @@
 section#lose.lose
   .c-grid
     .lose__wrapper
+      .lose__wrapper-left
+        .lose__block
+          p.lose__block-title!= "Our Services"
+
+          ul.lose__block-list
+            each val, idx in dataObj.lose
+              li.lose__block-item
+                a.lose__block-link(
+                  href= dataObj.lose[idx].href
+                  title="" class= (idx === 0) ? "is-active": ""
+                  lose-link-js
+                )!= dataObj.lose[idx].name
+
+          +link("lose__block-find", "FIND OUT MORE")
+
+      .lose__wrapper-right
+        div
+          p.lose__subtitle.subtitle!= "Lose the Label"
+          h1.lose__title.title.title--dark!= "Lose the Label"
+
+      .lose__img
+        +pictureTag(false, "", "object-fit object-fit--coverCenter", "png", "img-lose-bg")
+
+    .lose__comments
+      .lose__comments-left
+        .lose__comments-img
+          img.object-fit.object-fit--coverCenter(
+            srcset="./img/img-comments-user.png, ./img/img-comments-user@2x.png 2x"
+            alt="" title=""
+           )
+      .lose__comments-right
+        p.lose__comments-text
+          +iconSVG("quote")
+          != "How To Stop Living Your Life On Autopilot"
+          +iconSVG("quote")
+        p.lose__comments-name!= "Steven Pierce"
 
 // LOSE :: END
