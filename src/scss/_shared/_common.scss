@@ -194,4 +194,20 @@
 }
 // find out more :: end
 
+
+// animatedGradient
+@keyframes animatedGradient {
+  from {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}
+// animatedGradient :: end
+
+
 // COMMON :: END

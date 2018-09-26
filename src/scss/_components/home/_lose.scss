@@ -3,15 +3,29 @@
 .lose {
   padding-top: 211px;
   padding-bottom: 18px;
+  @include respond(max-small) {
+    padding-top: 105px;
+    padding-bottom: 45px;
+  }
 
   &__wrapper {
     position: relative;
     display: flex;
+    @include respond(max-extra-small) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
 
     &-left {
       z-index: 1;
       position: relative;
       width: 506px;
+      @include respond(max-medium) {
+        width: 50%;
+      }
+      @include respond(max-extra-small) {
+        width: 85%;
+      }
     }
 
     &-right {
@@ -19,25 +33,65 @@
       justify-content: flex-end;
       width: 100%;
       max-width: calc(100% - 506px);
+      padding-left: 30px;
+      @include respond(max-medium) {
+        max-width: 50%;
+      }
+      @include respond(max-extra-small) {
+        justify-content: flex-start;
+        max-width: 100%;
+        padding-left: 0;
+        padding-bottom: 50px;
+      }
     }
   }
 
   &__block {
     padding-top: 66px;
     padding-bottom: 75px;
+    padding-right: 15px;
     margin-bottom: 239px;
     background-color: $c-white;
     border-top: 8px solid $c-0074e1;
+    @include respond(max-large) {
+      padding-top: 40px;
+      padding-bottom: 50px;
+      margin-bottom: 255px;
+    }
+    @include respond(max-extra-small) {
+      margin-bottom: 300px;
+    }
 
     &-title {
       padding-bottom: 51px;
       text-transform: uppercase;
       letter-spacing: 1.43px;
       font-size: 24px;
+      @include respond(max-medium) {
+        font-size: 22px;
+        padding-bottom: 40px;
+      }
+      @include respond(max-extra-small) {
+        font-size: 20px;
+      }
     }
 
     &-list {
       padding-bottom: 75px;
+      @include respond(max-large) {
+        padding-bottom: 51px;
+      }
+      @include respond(max-medium) {
+        padding-bottom: 40px;
+      }
+    }
+
+    &-item {
+      &:last-of-type {
+        a {
+          margin-bottom: 0;
+        }
+      }
     }
 
     &-link {
@@ -49,6 +103,12 @@
       font-size: 26px;
       font-weight: 600;
       @include transition(text-shadow 0.4s);
+      @include respond(max-medium) {
+        font-size: 20px;
+      }
+      @include respond(max-extra-small) {
+        font-size: 16px;
+      }
 
       &.is-active,
       &:hover {
@@ -118,6 +178,10 @@
     margin-left: auto;
     padding: 25px 0;
     background-color: $c-white;
+    @include respond(max-extra-small) {
+      flex-wrap: wrap;
+      top: 0;
+    }
 
     &:after {
       content: "";
@@ -128,8 +192,10 @@
       width: 100%;
       height: 4px;
       background: rgb(0,116,225);
-      background: linear-gradient(to right, rgba(0,116,225,1) 0%,rgba(254,68,85,1) 100%);
+      background: linear-gradient(to right, rgba(0,116,225,1) 0%,rgba(254,68,85,1) 50%, rgba(0,116,225,1) 100%, rgba(254,68,85,1) 50%, rgba(0,116,225,1) 0%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0074e1', endColorstr='#fe4455',GradientType=1 );
+      background-size: 200% 100%;
+      animation: animatedGradient 4s ease-in-out alternate infinite;
     }
 
     &-left {
@@ -137,11 +203,18 @@
       align-items: center;
       justify-content: center;
       width: (133px + (34px * 2));
+      @include respond(max-extra-small) {
+        width: 100%;
+        padding-bottom: 30px;
+      }
     }
 
     &-right {
       width: 100%;
       max-width: calc(100% - (133px + (34px * 2)));
+      @include respond(max-extra-small) {
+        max-width: 100%;
+      }
     }
 
     &-img {
@@ -171,7 +244,11 @@
       display: table;
       margin-bottom: 10px;
       letter-spacing: 1px;
+      text-align: right;
       font-size: 32px;
+      @include respond(max-extra-small) {
+        font-size: 28px;
+      }
 
       svg {
         position: absolute;
@@ -194,6 +271,9 @@
       letter-spacing: 1.43px;
       font-size: 18px;
       font-weight: 600;
+      @include respond(max-extra-small) {
+        font-size: 14px;
+      }
     }
   }
 }
