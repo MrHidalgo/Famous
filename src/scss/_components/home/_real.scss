@@ -93,15 +93,32 @@
       border-radius: 100%;
       border: 10px solid $c-white;
       background-color: rgba($c-white, 0.32);
+      @include transition(background-color);
       @include respond(max-large) {
         top: 50%;
         left: 50%;
         right: auto;
         transform: translate(-50%, -50%);
       }
+      @include respond(max-extra-small) {
+        width: 80px;
+        height: 80px;
+        border-width: 5px;
+      }
+
+      &:hover {
+        background-color: $c-white;
+        @include transition(background-color);
+
+        svg {
+          fill: $c-0074e1;
+          @include transition(fill);
+        }
+      }
 
       svg {
         fill: $c-white;
+        @include transition(fill);
       }
     }
   }
