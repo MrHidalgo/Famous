@@ -4,6 +4,15 @@
   position: relative;
   padding-top: 213px;
   background-color: $c-18162e;
+  @include respond(max-wide-small) {
+    padding-top: 163px;
+  }
+  @include respond(max-large) {
+    padding-top: 113px;
+  }
+  @include respond(max-small) {
+    padding-top: 63px;
+  }
 
   &__bg {
     z-index: 0;
@@ -15,8 +24,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding-top: 17px;
-    padding-right: 150px;
+    padding: 17px 150px 15px 15px;
+    @include respond(max-wide-medium) {
+      padding-right: 100px;
+    }
+    @include respond(max-extra-large) {
+      padding-right: 50px;
+    }
+    @include respond(max-medium) {
+      padding-right: 0;
+    }
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 
   .c-grid {
@@ -27,6 +49,12 @@
     &-1 {
       position: relative;
       padding-bottom: 230px;
+      @include respond(max-wide-small) {
+        padding-bottom: 180px;
+      }
+      @include respond(max-large) {
+        padding-bottom: 130px;
+      }
     }
   }
 
@@ -44,12 +72,35 @@
     letter-spacing: 10.68px;
     font-size: 110px;
     font-weight: 900;
+    @include respond(max-wide-medium) {
+      font-size: 100px;
+    }
+    @include respond(max-wide-small) {
+      padding-bottom: 76px;
+      font-size: 85px;
+    }
+    @include respond(max-large) {
+      padding-bottom: 51px;
+      font-size: 64px;
+    }
+    @include respond(max-extra-small) {
+      font-size: 51px;
+    }
   }
 
   &__cover {
     display: flex;
     align-items: center;
     padding-bottom: 108px;
+    @include respond(max-wide-small) {
+      padding-bottom: 83px;
+    }
+    @include respond(max-large) {
+      padding-bottom: 58px;
+    }
+    @include respond(max-extra-small) {
+      flex-wrap: wrap;
+    }
   }
 
   &__line {
@@ -62,6 +113,14 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0074e1', endColorstr='#fe4455',GradientType=1 );
     background-size: 200% 100%;
     animation: animatedGradient 4s ease-in-out alternate infinite;
+    @include respond(max-medium) {
+      margin-right: 136px;
+    }
+    @include respond(max-extra-small) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -69,6 +128,12 @@
     letter-spacing: 2.14px;
     font-size: 30px;
     font-weight: bold;
+    @include respond(max-small) {
+      font-size: 26px;
+    }
+    @include respond(max-extra-small) {
+      font-size: 22px;
+    }
   }
 
   &__anchor {
@@ -78,12 +143,17 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 0;
+    left: 15px;
     bottom: -(173px / 2);
     width: 147px;
     height: 173px;
     background-color: $c-0074e1;
     @include transition(background-color);
+    @include respond(max-small) {
+      bottom: -(133px / 2);
+      width: 107px;
+      height: 133px;
+    }
 
     svg {
       fill: $c-white;
@@ -96,7 +166,7 @@
       content: "";
       position: absolute;
       top: -50px;
-      left: -150%;
+      left: -200%;
       height: 350px;
       width: 75px;
       background-color: $c-white;
