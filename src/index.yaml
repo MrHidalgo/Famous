@@ -3,10 +3,10 @@ ProjectTitle: Famous
 PageList:
 - file: /
   titleName: Home
-  ready: 85
+  ready: 75
 - file: services.html
   titleName: Services
-  ready: 85
+  ready: 75
 - file: artists.html
   titleName: Artists
   ready: 5
