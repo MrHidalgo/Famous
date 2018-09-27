@@ -151,6 +151,56 @@
 // link :: end
 
 
+// form
+.form {
+  &__field {
+    position: relative;
+    width: 100%;
+    max-width: 689px;
+    height: 68px;
+    margin-bottom: 20px;
+
+    &-group {
+      display: flex;
+      justify-content: space-between;
+
+      .form__field {
+        width: calc(50% - 8px);
+
+        &:first-of-type {
+          margin-right: 8px;
+        }
+        &:last-of-type {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    &-btn {
+      margin-top: 40px;
+    }
+  }
+
+  &__input {
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 27px;
+    border-radius: 0;
+    border: 1px solid $c-e3e7f2;
+    background-color: $c-f9fbff;
+    font-size: 18px;
+    @include inputPlaceholder {
+      color: $c-9ea8bb;
+    }
+  }
+}
+// form :: end
+
+
 // find out more
 .findout {
   width: 100%;
