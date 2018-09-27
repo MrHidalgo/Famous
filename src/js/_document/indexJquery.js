@@ -69,6 +69,8 @@ $(document).ready((ev) => {
     initSvg4everybody();
     // lib
     initHamburger();
+    initSmoothScroll();
+    initChangeImageSVG();
     // callback
     initSelectric();
     initVideoPlay();

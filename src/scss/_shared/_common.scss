@@ -160,6 +160,11 @@
     margin-left: auto;
   }
 
+  &--welcome {
+    max-width: 885px;
+    margin-right: 0;
+  }
+
   &__form {
     &-field {
       display: flex;

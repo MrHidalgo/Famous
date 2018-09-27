@@ -1,0 +1,29 @@
+// WELCOME :: START
+
+section#welcome.welcome
+  .welcome__bg
+    img.svg(
+      src="./img/home-drop-img.svg"
+      alt="" title=""
+     )
+
+  .c-grid.c-grid-0
+    .welcome__wrapper
+
+      h1.welcome__title!= "Your music.<br>Your Rules."
+
+      .welcome__cover
+        .welcome__line
+        p.welcome__text!= "Welcome  to  The  Famous  Company"
+
+      +findMoreMacros("welcome", "Email Address", "FIND OUT MORE")
+
+  .c-grid.c-grid-1
+    a(
+      href="#lose"
+      title="" class="welcome__anchor"
+      anchor-js
+    )
+      +iconSVG("arrow")
+
+// WELCOME :: END

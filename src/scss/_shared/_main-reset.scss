@@ -30,6 +30,17 @@ body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 131px;
+    background-color: $c-18162e;
+  }
 }
 
 
