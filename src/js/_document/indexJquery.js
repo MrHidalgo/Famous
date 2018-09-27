@@ -72,6 +72,7 @@ $(document).ready((ev) => {
     initHamburger();
     initSmoothScroll();
     initChangeImageSVG();
+    initStellar();
     // callback
     initSelectric();
     initVideoPlay();
