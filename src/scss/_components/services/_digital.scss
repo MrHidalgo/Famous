@@ -5,7 +5,10 @@
   position: relative;
   padding-top: 106px;
   padding-bottom: 111px;
-
+  @include respond(max-small) {
+    padding-top: 53px;
+    padding-bottom: 56px;
+  }
 
   &__bg {
     z-index: -1;
@@ -19,18 +22,29 @@
 
   &__wrapper {
     display: flex;
+    @include respond(max-medium) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
 
     &-left {
       position: relative;
       width: 100%;
       max-width: calc(100% - 548px);
       padding-top: 42px;
+      @include respond(max-medium) {
+        max-width: 100%;
+        padding-top: 0;
+      }
     }
 
     &-right {
       z-index: 1;
       position: relative;
       width: 548px;
+      @include respond(max-small) {
+        max-width: 100%;
+      }
     }
   }
 
@@ -39,10 +53,16 @@
       z-index: 1;
       position: relative;
       padding-bottom: 37px;
+      @include respond(max-small) {
+        padding-bottom: 0;
+      }
 
       svg {
         max-width: 100%;
         max-height: 100%;
+        @include respond(max-extra-small) {
+          height: 400px;
+        }
       }
     }
   }
@@ -57,18 +77,36 @@
     padding: 122px 70px 59px 73px;
     background-color: $c-white;
     box-shadow: 25px 2px 50px 0 rgba($c-17182c, 0.2);
+    @include respond(max-small) {
+      padding: 75px 55px 55px;
+    }
+    @include respond(max-extra-small) {
+      padding: 30px 15px;
+    }
 
     &-title {
       padding-bottom: 25px;
       line-height: 1.2;
       font-size: 62px;
       font-weight: bold;
+      @include respond(max-large) {
+        font-size: 52px;
+      }
+      @include respond(max-small) {
+        font-size: 42px;
+      }
+      @include respond(max-extra-small) {
+        font-size: 32px;
+      }
     }
 
     &-text {
       color: $c-a8aaac;
       line-height: 2;
       font-size: 20px;
+      @include respond(max-extra-small) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -112,6 +150,25 @@
   &__form {
     width: 100%;
     max-width: 689px;
+
+    .form__field-group {
+      @include respond(max-large) {
+        flex-wrap: wrap;
+      }
+    }
+
+    .form__field {
+      @include respond(max-large) {
+        width: 100%;
+
+        &:first-of-type {
+          margin-right: 0;
+        }
+        &:last-of-type {
+          margin-left: 0;
+        }
+      }
+    }
   }
 }
 
