@@ -6,5 +6,6 @@
 * - svg4everybody;
 * - jquery;
 * - jquery-selectric;
+* - TweenMax;
 *
 * */

@@ -29,11 +29,15 @@ const initChangeImageSVG = () => {
         if (!svg.hasAttribute('viewBox') && svg.hasAttribute('height') && svg.hasAttribute('width')) {
           svg.setAttribute('viewBox', '0 0 ' + svg.getAttribute('height') + ' ' + svg.getAttribute('width'))
         }
-        element.parentElement.replaceChild(svg, element)
+        element.parentElement.replaceChild(svg, element);
+
+        setTimeout(() => {
+          initParallaxHover();
+        }, 100);
       }
     };
 
     xhr.open('GET', imgURL, true);
     xhr.send(null);
-  })
+  });
 };

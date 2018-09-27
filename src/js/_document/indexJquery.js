@@ -59,6 +59,7 @@ $(document).ready((ev) => {
   };
 
 
+
   /**
    * @description Init all method
    */
