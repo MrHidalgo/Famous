@@ -7,6 +7,6 @@ PageList:
 - file: services.html
   titleName: Services
   ready: 75
-- file: artists.html
+- file: artist.html
   titleName: Artists
   ready: 5

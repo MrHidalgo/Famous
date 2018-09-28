@@ -1,0 +1,10 @@
+// SONGS :: START
+
+.songs {
+  padding-top: 105px;
+  @include respond(max-small) {
+    padding-top: 52px;
+  }
+}
+
+// SONGS :: END

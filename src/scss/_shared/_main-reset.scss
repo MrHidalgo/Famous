@@ -43,6 +43,9 @@ body {
     width: 100vw;
     min-height: 131px;
     background-color: $c-18162e;
+    @include respond(max-small) {
+      min-height: 65px;
+    }
   }
 }
 

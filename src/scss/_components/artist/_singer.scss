@@ -1,0 +1,10 @@
+// SINGER :: START
+
+.singer {
+  padding-bottom: 79px;
+  @include respond(max-small) {
+    padding-bottom: 39px;
+  }
+}
+
+// SINGER :: END

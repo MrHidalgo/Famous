@@ -1,0 +1,19 @@
+// TESTIMONIALS :: START
+
+section#testimonials.testimonials
+  .c-grid
+    .testimonials__wrapper
+      .testimonials__wrapper-left
+        .testimonials__img
+          +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-testimonials")
+
+      .testimonials__wrapper-right
+
+        p.testimonials__text
+          +iconSVG("quote")
+          != "Writing A Good Headline For Your Advertisement"
+          +iconSVG("quote")
+
+        p.testimonials__name!= "Adeline Lowe"
+
+// TESTIMONIALS :: END
