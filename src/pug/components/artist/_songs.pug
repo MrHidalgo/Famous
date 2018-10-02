@@ -1,7 +1,72 @@
 // SONGS :: START
 
 section#songs.songs
+  .songs__bg
+
   .c-grid
     .songs__wrapper
+      .songs__wrapper-left
+        .songs__head
+          div.songs__head-left
+            .songs__head-img
+              +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-head-img-song")
+
+          div.songs__head-right
+            p.songs__name!= "Lewis Beck"
+            p.songs__music!= "Artist Name's Music"
+
+        .songs__body
+          div.songs__body-controls
+            a(
+              href="#"
+              title="" class=""
+            )
+              +iconSVG("pause", "pause-js")
+              +iconSVG("play", "play-js")
+          div.songs__body-wave
+          div.songs__body-additional
+            a(
+              href="#"
+              title="" class=""
+            )
+              +iconSVG("volume")
+            a(
+              href="#"
+              title="" class=""
+            )
+              +iconSVG("full-screen")
+
+        .songs__footer
+          a(href="#").songs__description
+            div
+              .songs__description-img
+                +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-head-img-song")
+            div
+              p.songs__description-name!= "Lewis Beck"
+              p.songs__description-music!= "Artist Name's Music"
+            div
+              p.songs__description-time!= "5:20"
+          a(href="#").songs__description
+            div
+              .songs__description-img
+                +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-head-img-song")
+            div
+              p.songs__description-name!= "Lewis Beck"
+              p.songs__description-music!= "Artist Name's Music"
+            div
+              p.songs__description-time!= "5:20"
+          a(href="#").songs__description
+            div
+              .songs__description-img
+                +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-head-img-song")
+            div
+              p.songs__description-name!= "Lewis Beck"
+              p.songs__description-music!= "Artist Name's Music"
+            div
+              p.songs__description-time!= "5:20"
+
+      .songs__wrapper-right
+        +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-view-song")
+
 
 // SONGS :: END
