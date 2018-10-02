@@ -12,7 +12,7 @@ footer#footer.footer
 
       .footer__wrapper-bottom
         .footer__wrapper-left
-          include ../macros/_social
+          +social("footer", dataObj.social)
 
         .footer__wrapper-right
           +findMoreMacros("footer", "Email Address", "FIND OUT MORE")

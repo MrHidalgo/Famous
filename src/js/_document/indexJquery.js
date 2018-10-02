@@ -73,6 +73,7 @@ $(document).ready((ev) => {
     initSmoothScroll();
     initChangeImageSVG();
     initStellar();
+    initSwiper();
     // callback
     initSelectric();
     initVideoPlay();

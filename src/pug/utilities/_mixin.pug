@@ -50,4 +50,20 @@ mixin link(classMod, val)
     +iconSVG("arrow")
 
 
+//- SOCIAL
+mixin social(classMod, obj)
+  mixin socialArtistsItem(iconName)
+    li.social__item
+      a.social__link(
+        href="#"
+        title="" class=""
+      )
+        +iconSVG(iconName)
+
+  .social(class!= "social--" + classMod)
+    ul.social__list
+      each val, idx in obj
+        +socialArtistsItem(obj[idx].name)
+
+
 //- MIXIN :: END

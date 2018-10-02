@@ -1,7 +1,47 @@
 // SINGER :: START
 
 section#singer.singer
+  .singer__bg
   .c-grid
     .singer__wrapper
+      .singer__wrapper-left
+        .singer__slider
+          .singer__slider--top
+            include ../../macros/_swiperSingerView
+
+          .singer__slider--bottom
+            include ../../macros/_swiperSingerPreview
+
+
+      .singer__wrapper-right
+        .singer__head
+          h2!= "Christopher Salazar"
+          p!= "Singer"
+
+        .singer__body
+          p!= "There is such a lot of talk going around about branding, but what exactly is your brand and how do you use it to help you reach more people and market your products or services?"
+
+          +social("artists", dataObj.socialArtists)
+
+        .singer__footer
+          p!= "Let’s talk about your music!"
+
+          .singer__form
+            form(action="" method="" autocomplete="off").form
+              .form__field-group
+                .form__field.form__field-input
+                  input.form__input(type="text" name="" placeholder="Name")
+
+                .form__field.form__field-input
+                  input.form__input(type="text" name="" placeholder="Telephone")
+
+              .form__field.form__field-input
+                input.form__input(type="text" name="" placeholder="Email Address")
+
+              .form__field.form__field-btn
+                button.form__btn.btn.btn--blue(type="submit")!= "FIND OUT MORE"
+
+      .singer__line.singer__line-1
+      .singer__line.singer__line-0
 
 // SINGER :: END

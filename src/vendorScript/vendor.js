@@ -9,5 +9,8 @@
 * - TweenMax;
 * - jquery-migrate-3.0.1.min.js;
 * - jquery.stellar.min.js;
+* - jQuery-viewport-checker;
+* - swiper;
+* - magnific-popup;
 *
 * */

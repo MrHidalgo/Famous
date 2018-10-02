@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="17px" viewBox="0 0 11 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>pause</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artist_page" transform="translate(-386.000000, -1969.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="pause" transform="translate(386.000000, 1969.000000)">
+                <path d="M1.5,17 C0.671321794,17 0,16.3155573 0,15.4711307 L0,1.52886929 C0,0.684442662 0.671518489,0 1.5,0 C2.32848151,0 3,0.684442662 3,1.52886929 L3,15.4711307 C3,16.3155573 2.32848151,17 1.5,17 Z" id="Shape"></path>
+                <path d="M9.49990166,17 C8.67147446,17 8,16.3155573 8,15.4711307 L8,1.52886929 C8,0.684442662 8.67147446,0 9.49990166,0 C10.3283289,0 11,0.684442662 11,1.52886929 L11,15.4711307 C11,16.3155573 10.3283289,17 9.49990166,17 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

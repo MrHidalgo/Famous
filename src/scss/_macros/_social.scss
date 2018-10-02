@@ -43,9 +43,17 @@
     background-color: $c-white;
     @include transition(transform 0.5s, background-color 0.5s);
 
+    .social--artists &  {
+      background-color: $c-18162e;
+    }
+
     svg {
       fill: $c-18162e;
       @include transition(fill 0.5s);
+
+      .social--artists & {
+        fill: $c-white;
+      }
     }
   }
 }

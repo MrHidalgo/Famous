@@ -178,6 +178,11 @@
 
     &-btn {
       margin-top: 40px;
+      height: auto;
+
+      .singer__form & {
+        margin-bottom: 0;
+      }
     }
   }
 
