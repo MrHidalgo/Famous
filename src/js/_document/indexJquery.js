@@ -184,6 +184,7 @@ $(document).ready((ev) => {
     initChangeImageSVG();
     initStellar();
     initSwiper();
+    initPopups();
     // callback
     initSelectric();
     initVideoPlay();
