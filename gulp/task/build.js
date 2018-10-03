@@ -13,6 +13,7 @@ gulp.task("build", function(callback) {
     'js',
     'fonts',
     'video',
+    'audio',
     'spritePNG',
     'spriteSVG',
     'vendorScript',

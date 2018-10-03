@@ -42,7 +42,18 @@
     }
 
     &-right {
+      position: relative;
       width: 555px;
+
+      picture {
+        display: flex;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -57,19 +68,8 @@
     }
 
     &-right {
-      position: relative;
       width: 100%;
       max-width: calc(100% - 154px);
-
-      picture {
-        display: flex;
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
     }
 
     &-img {
@@ -120,9 +120,29 @@
         border-radius: 100%;
         background-color: $c-f4455a;
         box-shadow: 0 4px 10px 0 rgba($c-f4455a, 0.48);
+        @include transition(box-shadow);
+
+        &:hover {
+          box-shadow: 0 2px 5px 0 rgba($c-f4455a, 0.48);
+          @include transition(box-shadow);
+        }
+
+        &.is-play {
+          svg {
+            &.pause-js {
+              display: block;
+            }
+            &.play-js {
+              display: none;
+            }
+          }
+        }
 
         svg {
           fill: $c-white;
+          animation-fill-mode: both;
+          animation-duration: 0.5s;
+          animation-name: fadeIn;
 
           &.pause-js {
             display: none;
@@ -135,8 +155,10 @@
     }
 
     &-wave {
+      position: relative;
       width: 100%;
       max-width: calc(100% - (50px + 100px));
+      height: 128px;
     }
 
     &-additional {
@@ -156,10 +178,24 @@
         border-radius: 100%;
         background-color: $c-white;
         box-shadow: 0 4px 10px 0 rgba(#767676, 0.29);
+        @include transition(box-shadow);
+
+        &:hover {
+          box-shadow: 0 2px 5px 0 rgba(#767676, 0.29);
+          @include transition(box-shadow);
+        }
 
         &:first-child {
+          &.is-mute {
+            svg {
+              fill: $c-cfd1d3;
+              @include transition(fill);
+            }
+          }
+
           svg {
             fill: $c-0074e1;
+            @include transition(fill);
           }
         }
         &:last-child {
@@ -244,6 +280,23 @@
 
     &-time {
       font-weight: bold;
+    }
+  }
+
+  &__time {
+    position: absolute;
+    bottom: -20px;
+    font-weight: bold;
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+    animation-name: fadeIn;
+
+    &--current {
+      left: 0;
+    }
+
+    &--duration {
+      right: 0;
     }
   }
 }

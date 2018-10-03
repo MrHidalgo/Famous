@@ -17,6 +17,7 @@ const configPath = {
     icon          : srcPath + '/icon',
     fonts         : srcPath + '/fonts',
     video         : srcPath + '/video',
+    audio         : srcPath + '/audio',
   },
 
   // DEST
@@ -28,7 +29,8 @@ const configPath = {
     img           : destPath + '/img',
     icon          : destPath + '/icon',
     fonts         : destPath + '/fonts',
-    video         : destPath + '/video'
+    video         : destPath + '/video',
+    audio         : destPath + '/audio',
   },
 
   errorHandler: require('../util/error')

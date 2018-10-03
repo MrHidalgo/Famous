@@ -8,26 +8,33 @@ section#songs.songs
       .songs__wrapper-left
         .songs__head
           div.songs__head-left
-            .songs__head-img
-              +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-head-img-song")
+            .songs__head-img(songs-imgPreview-js)
+              +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-songs-50cent")
 
           div.songs__head-right
-            p.songs__name!= "Lewis Beck"
-            p.songs__music!= "Artist Name's Music"
+            p.songs__name(songs-name-js)!= "50 Cent"
+            p.songs__music(songs-music-js)!= "I'm The Man"
 
         .songs__body
           div.songs__body-controls
             a(
               href="#"
               title="" class=""
+              controls-btn-js
             )
               +iconSVG("pause", "pause-js")
               +iconSVG("play", "play-js")
           div.songs__body-wave
+            p.songs__time.songs__time--current(songs-timeCurrent-js)!= ""
+            p.songs__time.songs__time--duration(songs-timeDuration-js)!= ""
+            #waveform
+
+
           div.songs__body-additional
             a(
               href="#"
               title="" class=""
+              volume-btn-js
             )
               +iconSVG("volume")
             a(
@@ -37,36 +44,36 @@ section#songs.songs
               +iconSVG("full-screen")
 
         .songs__footer
-          a(href="#").songs__description
+          a(href="#" data-obj='{"src":"../audio/2Pac-HitEmUp(Dirty).mp3", "timeDuration": "5:22"}').songs__description
             div
               .songs__description-img
-                +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-head-img-song")
+                +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-songs-2Pac")
             div
-              p.songs__description-name!= "Lewis Beck"
-              p.songs__description-music!= "Artist Name's Music"
+              p.songs__description-name!= "2Pac"
+              p.songs__description-music!= "Hit Em Up (Dirty)"
             div
-              p.songs__description-time!= "5:20"
-          a(href="#").songs__description
-            div
-              .songs__description-img
-                +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-head-img-song")
-            div
-              p.songs__description-name!= "Lewis Beck"
-              p.songs__description-music!= "Artist Name's Music"
-            div
-              p.songs__description-time!= "5:20"
-          a(href="#").songs__description
+              p.songs__description-time!= "5:22"
+          a(href="#" data-obj='{"src":"../audio/AViVA-GRRRLS.mp3", "timeDuration":"4:48"}').songs__description
             div
               .songs__description-img
-                +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-head-img-song")
+                +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-songs-AViVA")
             div
-              p.songs__description-name!= "Lewis Beck"
-              p.songs__description-music!= "Artist Name's Music"
+              p.songs__description-name!= "AViVA"
+              p.songs__description-music!= "GRRRLS"
             div
-              p.songs__description-time!= "5:20"
+              p.songs__description-time!= "3:48"
+          a(href="#" data-obj='{"src":"../audio/Matrix&Futurebound-DontLookBack.mp3", "timeDuration":"3:54"}').songs__description
+            div
+              .songs__description-img
+                +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-songs-Matrix&Futurebound")
+            div
+              p.songs__description-name!= "Matrix & Futurebound"
+              p.songs__description-music!= "Don't Look Back"
+            div
+              p.songs__description-time!= "3:54"
 
-      .songs__wrapper-right
-        +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-view-song")
+      .songs__wrapper-right(songs-imgView-js)
+        +pictureTag(false, "", "object-fit object-fit--coverCenter", "jpg", "img-songs-50cent")
 
 
 // SONGS :: END
