@@ -8,6 +8,9 @@
   @include respond(max-small) {
     padding-bottom: 39px;
   }
+  @include respond(max-extra-small) {
+    padding-top: 36px;
+  }
 
   &__bg {
     z-index: 0;
