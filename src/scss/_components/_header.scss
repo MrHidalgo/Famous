@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   background-color: $c-18162e;
   @include transition(background-color);
 
@@ -78,7 +78,7 @@
       position: fixed;
       top: 65px;
       left: 0;
-      max-width: 100vw;
+      max-width: 100%;
       height: calc(100% - 65px);
       padding: 30px 0;
       background-color: rgba($c-18162e, 0.925);
