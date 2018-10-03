@@ -59,8 +59,11 @@
       @include respond(max-large) {
         max-width: 100%;
       }
-      @include respond(max-extra-small) {
+      @include respond(max-small) {
         padding: 40px 35px;
+      }
+      @include respond(max-extra-small) {
+        padding: 30px 25px;
       }
     }
   }
@@ -100,6 +103,10 @@
     justify-content: space-between;
     padding-bottom: 42px;
     border-bottom: 1px solid $c-e3e7f2;
+    @include respond(max-extra-small) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
 
     h2 {
       width: 100%;
@@ -112,6 +119,7 @@
         font-size: 40px;
       }
       @include respond(max-extra-small) {
+        max-width: 100%;
         font-size: 30px;
       }
     }
@@ -122,6 +130,8 @@
       text-align: right;
       font-size: 18px;
       @include respond(max-extra-small) {
+        width: 100%;
+        padding-bottom: 15px;
         font-size: 16px;
       }
     }
