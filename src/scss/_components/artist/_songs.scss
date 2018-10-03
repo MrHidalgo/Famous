@@ -8,6 +8,9 @@
   @include respond(max-small) {
     padding-top: 52px;
   }
+  @include respond(max-extra-small) {
+    padding-bottom: 34px;
+  }
 
   &__bg {
     z-index: 0;
@@ -33,17 +36,33 @@
     position: relative;
     display: flex;
 
+
     &-left {
       width: 100%;
       max-width: calc(100% - 555px);
       padding: 50px;
       background-color: $c-white;
       box-shadow: 17px 2px 40px 0 rgba($c-black, 0.15);
+      @include respond(max-large) {
+        max-width: 60%;
+      }
+      @include respond(max-medium) {
+        max-width: 100%;
+      }
+      @include respond(max-extra-small) {
+        padding: 30px;
+      }
     }
 
     &-right {
       position: relative;
       width: 555px;
+      @include respond(max-large) {
+        width: 40%;
+      }
+      @include respond(max-medium) {
+        display: none;
+      }
 
       picture {
         display: flex;
@@ -61,21 +80,37 @@
     display: flex;
     align-items: center;
     padding-bottom: 29px;
+    @include respond(max-extra-small) {
+      flex-wrap: wrap;
+    }
 
     &-left {
       width: 154px;
       padding-right: 37px;
+      @include respond(max-extra-small) {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 30px;
+      }
     }
 
     &-right {
       width: 100%;
       max-width: calc(100% - 154px);
+      @include respond(max-extra-small) {
+        max-width: 100%;
+        text-align: center;
+      }
     }
 
     &-img {
       position: relative;
       width: 117px;
       height: 117px;
+      @include respond(max-extra-small) {
+        margin-left: auto;
+        margin-right: auto;
+      }
 
       &:after {
         content: "";
@@ -105,10 +140,19 @@
     display: flex;
     align-items: center;
     padding-bottom: 72px;
+    @include respond(max-extra-small) {
+      flex-wrap: wrap;
+    }
 
     &-controls {
       width: 50px;
       padding-right: 9px;
+      @include respond(max-extra-small) {
+        order: 1;
+        width: 50%;
+        padding-right: 0;
+        padding-bottom: 30px;
+      }
 
       a {
         overflow: hidden;
@@ -159,6 +203,10 @@
       width: 100%;
       max-width: calc(100% - (50px + 100px));
       height: 128px;
+      @include respond(max-extra-small) {
+        order: 3;
+        max-width: 100%;
+      }
     }
 
     &-additional {
@@ -167,6 +215,11 @@
       justify-content: space-between;
       width: 100px;
       padding-left: 10px;
+      @include respond(max-extra-small) {
+        order: 2;
+        width: 50%;
+        padding-bottom: 30px;
+      }
 
       a {
         overflow: hidden;
@@ -212,6 +265,9 @@
     height: auto;
     max-height: 336px;
     border-top: 1px solid $c-e3e7f2;
+    @include respond(max-extra-small) {
+      max-height: 416px;
+    }
   }
 
   &__name {
@@ -231,6 +287,9 @@
     padding-top: 17px;
     padding-bottom: 17px;
     color: $c-111;
+    @include respond(max-extra-small) {
+     flex-wrap: wrap;
+    }
 
     &:first-child {
       border-top: none;
@@ -240,14 +299,27 @@
       &:nth-child(1) {
         width: 100px;
         padding-right: 23px;
+        @include respond(max-extra-small) {
+          width: 100%;
+          padding-right: 0;
+        }
       }
       &:nth-child(2) {
         width: 100%;
         max-width: calc(100% - (100px + 75px));
+        @include respond(max-extra-small) {
+          max-width: 100%;
+          padding-bottom: 17px;
+          text-align: center;
+        }
       }
       &:nth-child(3) {
         width: 75px;
         text-align: right;
+        @include respond(max-extra-small) {
+          width: 100%;
+          text-align: center;
+        }
       }
     }
 
@@ -257,6 +329,11 @@
       width: 77px;
       height: 77px;
       border-radius: 100%;
+      @include respond(max-extra-small) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 17px;
+      }
 
       picture {
         display: flex;
