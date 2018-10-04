@@ -85,14 +85,7 @@ $(document).ready((ev) => {
      */
     const btnControls = (btnName, classMod, wavesurferMethod) => {
       $(btnName).on('click', (ev) => {
-        const btn = $(ev.currentTarget);
-
-        if(btn.hasClass(classMod)) {
-          btn.removeClass(classMod);
-        } else {
-          btn.addClass(classMod);
-        }
-
+        $(ev.currentTarget).toggleClass(classMod);
         wavesurfer[wavesurferMethod]();
       });
     };
@@ -134,6 +127,24 @@ $(document).ready((ev) => {
       );
       $('[songs-timeCurrent-js]').text("0:00");
       $(wavesurfer.params.container).find("canvas").addClass("animated fadeIn");
+    });
+
+    /**
+     * When is finishes playing
+     */
+    wavesurfer.on('finish', () => {
+      $("[controls-btn-js]").removeClass("is-play");
+      $("[volume-btn-js]").removeClass("is-mute");
+      $('[songs-timeCurrent-js]').text("0:00");
+
+      wavesurfer.seekTo(0);
+    });
+
+    /**
+     * On seeking. Callback will receive (float) progress [0..1]
+     */
+    wavesurfer.on('seek', () => {
+      $('[songs-timeCurrent-js]').text(formatTime(wavesurfer.getCurrentTime()));
     });
 
     /**
